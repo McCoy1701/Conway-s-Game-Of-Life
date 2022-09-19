@@ -1,5 +1,6 @@
 import pygame, asyncio, time
 from src.settings import *
+from src.support import exit
 
 pygame.init()
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
@@ -72,6 +73,7 @@ async def main():
     global GRID, xLen, yLen, screen, clock
     screen.fill('black')
     updateGrid(GRID)
+    # inc = 0
 
     running = False
     while True:
@@ -95,6 +97,8 @@ async def main():
                 updateGrid(GRID)
 
         if running:
+            # inc += 1
+            # pygame.image.save(screen, 'photos/jakester/' + str(inc) + '.png')
             GRID = updateGrid(GRID, processing = True)
             pygame.display.update()
             time.sleep(0.1)
