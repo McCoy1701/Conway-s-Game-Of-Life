@@ -91,7 +91,7 @@ async def main():
                 updateGrid(GRID)
 
             if pygame.mouse.get_pressed()[2]:
-                GRID[pos[1] // CELL_SIZE][pos[0] // CELL_SIZE] = 0
+                GRID[pos[0] // CELL_SIZE][pos[1] // CELL_SIZE] = 0
                 updateGrid(GRID)
 
         if running:
